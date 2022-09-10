@@ -30,7 +30,7 @@ def reset_clip_timecode():
 		fileTime = time[0].replace('_', '')
 		rawTime = re.findall(r'[0-9]{2}', fileTime)
 
-		timecode = '00:' + ":".join(rawTime)
+		timecode = ":".join(rawTime) + ':00'
 
 		tcValid = _validate(timecode)
 
